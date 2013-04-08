@@ -312,7 +312,7 @@ static int appleir_probe(struct hid_device *hid, const struct hid_device_id *id)
 		goto fail;
 	}
 
-	ret = hid_hw_start(hid, HID_CONNECT_DEFAULT);
+	ret = hid_hw_start(hid, HID_CONNECT_DEFAULT | HID_CONNECT_HIDDEV_FORCE);
 	if (ret) {
 		hid_err(hid, "hw start failed\n");
 		goto fail;
