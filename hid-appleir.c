@@ -39,7 +39,7 @@ MODULE_LICENSE("GPL");
 #define appleir_dbg(hid, fmt, arg...)					  \
 do {									  \
 	if (debug)							  \
-		dev_printk(KERN_DBG, &(hid)->dev, fmt, ##arg); \
+		dev_printk(KERN_DEBUG, &(hid)->dev, fmt, ##arg); \
 } while (0)
 
 static int debug;
